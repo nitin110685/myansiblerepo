@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+  - name: i want to install webserver on ansible ubuntu nodes
+    apt:
+      name: apache2
+      state: present
+    
+  - name: i want to start webserver on ansible ubuntu nodes
+    service:
+        name: apache2
+        state: started
+  - name: i want to start tree
+    service:
+        name: tree
+        state: started
+       
