@@ -1,0 +1,8 @@
+---
+-hosts: mywebserver
+become: yes
+tasks:
+-name: i want to creat file
+file:
+path: D:/DevOps/Ansible practice/Ansible
+state: touch 
