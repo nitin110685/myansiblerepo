@@ -2,7 +2,8 @@
 -hosts: mywebserver
 become: yes
 tasks:
-- name: i want to creat file
-  file:
-   path: /home/mytestfile
-   state: touch 
+- include_tasks: myfile.yml
+- name: i want to insatll webserver
+apt:
+  name: apache2
+  state: present
