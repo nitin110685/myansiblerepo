@@ -4,6 +4,11 @@ become: yes
 tasks:
 - include_tasks: myfile.yml
 - name: i want to insatll webserver
-apt:
-  name: apache2
-  state: present
+  apt:
+   name: apache2
+   state: present
+
+- name: i want to copy file into ansible notes
+template:
+   src: myindex.j2
+   dest: /var/wwwhtmlindex.html
