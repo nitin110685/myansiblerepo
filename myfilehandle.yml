@@ -2,13 +2,13 @@
 - hosts: mywebserver
   become: yes
   tasks:
-- include_tasks: myfile.yml
-- name: i want to insatll webserver
-  apt:
-   name: apache2
-   state: present
+  - include_tasks: myfile.yml
+  - name: i want to install webserver
+    apt:
+     name: apache2
+     state: present
 
-- name: i want copy file into ansible notes
+  - name: i want copy file into ansible notes
   template:
    src: myindex.j2
    dest: /var/www/html/index.html
