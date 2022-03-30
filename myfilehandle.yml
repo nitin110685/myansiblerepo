@@ -1,7 +1,7 @@
 ---
--hosts: mywebserver
-become: yes
-tasks:
+- hosts: mywebserver
+  become: yes
+  tasks:
 - include_tasks: myfile.yml
 - name: i want to insatll webserver
   apt:
@@ -9,6 +9,6 @@ tasks:
    state: present
 
 - name: i want copy file into ansible notes
-template:
+  template:
    src: myindex.j2
    dest: /var/www/html/index.html
