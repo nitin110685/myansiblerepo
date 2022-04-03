@@ -10,5 +10,5 @@
 - name: i want to copy index file to nodes
   template:
    src: template/myindex.j2
-   dest: /vars/www/html/index.html
+   dest: /var/www/html/index.html
   notify: webserverrestart
