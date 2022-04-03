@@ -9,6 +9,6 @@
 
 - name: i want to copy index file to nodes
   template:
-   src: templet/myindex.j2
+   src: template/myindex.j2
    dest: /vars/www/html/index.html
   notify: webserverrestart
