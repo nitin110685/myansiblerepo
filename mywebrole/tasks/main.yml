@@ -1,2 +1,14 @@
 ---
 # tasks file for mywebrole
+
+- name: i want to install apache2
+  apt: 
+    name: apache2
+    state: present
+  notify: webserverrestart
+
+- name: i want to copy index file to nodes
+  template:
+   src: templet/myindex.j2
+   dest: /vars/www/html/index.html
+  notify: webserverrestart
