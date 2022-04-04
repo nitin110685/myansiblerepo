@@ -1,0 +1,20 @@
+---
+
+- hosts: 172.31.23.40
+  become: yes
+  tasks:
+
+- name: i want install git
+  apt: 
+   name: apache2
+   state: present
+
+- name: i want install tree
+  apt: 
+   name: tree
+   state: present
+
+- name: i want install wget
+  apt: 
+   name: wget
+   state: present
