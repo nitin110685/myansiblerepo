@@ -1,2 +1,8 @@
 ---
 # tasks file for myroletomcat
+  - include_tasks: installjava.yml
+  - include_tasks: createtomcatuser.yml
+  - include_tasks: installtomcat.yml
+  - include_tasks: updatepermissions.yml
+  - include_tasks: tomcatservicefile.yml
+  - include_tasks: starttomcat.yml
